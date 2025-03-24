@@ -13,7 +13,7 @@ public class SommeDeTableauDiff {
         if(array1.length == array2.length){
             int[] sum = new int[array1.length];
             for(int i = 0; i < array1.length; i++){
-                sum[i] = array1[i] + array2[i];
+                sum[i] = array1[i] - array2[i];
             }
             for(int s: sum){
                 System.out.println("sum is:"+ s);
@@ -26,7 +26,7 @@ public class SommeDeTableauDiff {
                 if(j >= array2.length){
                     j = 0;
                 }
-                sum[i] = array1[i] + array2[j];
+                sum[i] = array1[i] - array2[j];
                 j++;
             }
             for(int s: sum){
@@ -39,11 +39,11 @@ public class SommeDeTableauDiff {
                 if(j >= array1.length){
                     j = 0;
                 }
-                sum[i] = array1[j] + array2[i];
+                sum[i] = array1[j] - array2[i];
                 j++;
             }
             for(int s: sum){
-                System.out.println("sum is:"+ s);
+                System.out.println("diff is:"+ s);
             }
         }
 
